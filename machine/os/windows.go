@@ -6,9 +6,10 @@ desc: 获取windows操作系统的相关硬件基础编码信息
 package os
 
 import (
-	"github.com/super-l/machine-code/machine/types"
 	"os/exec"
 	"strings"
+
+	"github.com/lazyphp/machine-code/machine/types"
 )
 
 type WindowsMachine struct{}

@@ -6,8 +6,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/super-l/machine-code/machine"
 	"testing"
+
+	"github.com/lazyphp/machine-code/machine"
 )
 
 // https://www.icode9.com/content-3-710187.html  go 获取linux cpuId 的方法

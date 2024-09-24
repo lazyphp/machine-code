@@ -9,10 +9,11 @@ import (
 	"bytes"
 	"encoding/xml"
 	"fmt"
-	"github.com/super-l/machine-code/machine/types"
 	"os"
 	"os/exec"
 	"strings"
+
+	"github.com/lazyphp/machine-code/machine/types"
 )
 
 type MacMachine struct{}
@@ -125,7 +126,7 @@ func (MacMachine) macXmlToData(xmlcontent string) (types.Information, error) {
 }
 
 func (mac MacMachine) getCpuSerialNumberBase() (cpuId string, err error) {
-	//sysctl -x machdep.cpu.signature
+	// sysctl -x machdep.cpu.signature
 	var cmd *exec.Cmd
 	cmd = exec.Command("sysctl", "-x", "machdep.cpu.signature")
 

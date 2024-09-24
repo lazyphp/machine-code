@@ -7,10 +7,11 @@ package os
 import (
 	"bytes"
 	"errors"
-	"github.com/super-l/machine-code/machine/types"
 	"os"
 	"os/exec"
 	"strings"
+
+	"github.com/lazyphp/machine-code/machine/types"
 )
 
 type LinuxMachine struct{}
@@ -90,7 +91,7 @@ func (LinuxMachine) GetCpuSerialNumber2() (cpuId string, err error) {
 	err = cmd.Wait()
 	if err == nil {
 		uuid := out.String()
-		//uuid = strings.Replace(uuid, "\n", "", -1)
+		// uuid = strings.Replace(uuid, "\n", "", -1)
 		return uuid, nil
 	} else {
 		return "", err

@@ -7,12 +7,12 @@ package machine
 
 import (
 	"errors"
-	"github.com/super-l/machine-code/machine/os"
-	"github.com/super-l/machine-code/machine/types"
 	"net"
 	"runtime"
 	"strings"
 
+	"github.com/lazyphp/machine-code/machine/os"
+	"github.com/lazyphp/machine-code/machine/types"
 )
 
 func GetMachineData() (data types.Information) {
@@ -24,7 +24,7 @@ func GetMachineData() (data types.Information) {
 	} else if runtime.GOOS == "windows" {
 		osMachine = os.WindowsMachine{}
 	}
-	var machineData = osMachine.GetMachine()
+	machineData := osMachine.GetMachine()
 	machineData.LocalMacInfo, _ = GetMACAddress()
 	return machineData
 }
