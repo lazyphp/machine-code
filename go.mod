@@ -1,3 +1,3 @@
-module github.com/super-l/machine-code
+module github.com/lazyphp/machine-code
 
 go 1.14
